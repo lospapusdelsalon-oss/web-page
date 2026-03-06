@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQs</title>
+
+<style>
+
+body{
+font-family: 'Segoe UI', Arial, sans-serif;
+margin:0;
+background:linear-gradient(135deg,#e8f5e9,#f1f8e9);
+color:#333;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#2e7d32,#1b5e20);
+color:white;
+text-align:center;
+padding:30px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* NAVBAR */
+
+nav{
+background:#1b5e20;
+padding:12px;
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:8px 15px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#43a047;
+transform:scale(1.05);
+}
+
+/* PRODUCTS */
+
+.products{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:50px;
+flex-wrap:wrap;
+}
+
+.product{
+background:white;
+padding:20px;
+width:260px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+text-align:center;
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* BUTTONS */
+
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+background:#43a047;
+transform:scale(1.05);
+}
+
+/* CART */
+
+.cart{
+padding:40px;
+max-width:650px;
+margin:40px auto;
+background:white;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.cart li{
+padding:10px;
+margin-bottom:10px;
+background:#f1f8e9;
+border-radius:6px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* REMOVE BUTTON */
+
+.cart button{
+background:#e53935;
+}
+
+.cart button:hover{
+background:#c62828;
+}
+
+/* SHIPPING PAGE */
+
+.container{
+padding:40px;
+max-width:600px;
+margin:40px auto;
+background:white;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+select{
+padding:12px;
+width:100%;
+margin-bottom:20px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:15px;
+}
+
+/* FAQ */
+
+.container .faq{
+background:white;
+padding:18px;
+margin:15px 0;
+border-radius:10px;
+cursor:pointer;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.container .faq:hover{
+transform:scale(1.02);
+background:#f1f8e9;
+}
+
+.answer{
+display:none;
+margin-top:10px;
+color:#555;
+}
+
+/* TOTAL */
+
+h3{
+text-align:right;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Frequently Asked Questions</h1>
+</header>
+
+<nav>
+<a href="index.html">Products</a>
+<a href="cart.html">Cart</a>
+<a href="shipping.html">Payment & Shipping</a>
+<a href="faq.html">FAQs</a>
+</nav>
+
+<div class="container">
+
+<div class="faq" onclick="toggle(this)">
+<strong>Are your products eco-friendly?</strong>
+<div class="answer">Yes, all products are made to reduce environmental impact.</div>
+</div>
+
+<div class="faq" onclick="toggle(this)">
+<strong>Do you ship internationally?</strong>
+<div class="answer">Yes, we ship to most countries worldwide.</div>
+</div>
+
+<div class="faq" onclick="toggle(this)">
+<strong>How long does shipping take?</strong>
+<div class="answer">Standard shipping takes 5-7 business days.</div>
+</div>
+
+<div class="faq" onclick="toggle(this)">
+<strong>Can I return a product?</strong>
+<div class="answer">Yes. You can return products within 15 days if they are unused.</div>
+</div>
+
+</div>
+
+<script>
+
+function toggle(el){
+
+let ans = el.querySelector(".answer");
+
+if(ans.style.display === "block"){
+ans.style.display = "none";
+}else{
+ans.style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
